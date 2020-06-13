@@ -276,5 +276,6 @@ Using the public IP of our instance we will host our html code.
 
 
 
-We can destroy the infrastructure that we created using :
-      terraform destroy --auto-approve
+We can destroy the infrastructure that we created using command:
+         
+     terraform destroy --auto-approve
