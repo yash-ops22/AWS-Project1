@@ -190,17 +190,23 @@ Creating a S3 bucke, uploading images into it amd allowing public access.
 }
 
 
+      resource "aws_s3_bucket_object" "s3images" {
+           
+        bucket ="${ aws_s3_bucket.S3_bucket.bucket}" 
+        key = "yashukey1"
+        source = "C:/Users/win 10/Desktop/uploads/s3images/hc.jpg"
+
+        content_type = "image/jpg"
+}
+
 
 <img src="webs3.png">
 
 
 
-<img src="uploadimg.png">
 
 
-
-
-# Step:10
+# Step:8
 Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the html code with cloudfront. 
 <img src="cdn.png">
 <img src="webcdn.png">
