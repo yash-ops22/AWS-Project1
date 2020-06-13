@@ -15,45 +15,84 @@ The task includes:
 
 # solution
 
+//yashu
+
 Firstly We will configure the aws profile.
-<img src=" " width="400" height="400">
 
 Then we will set our provider which is aws and the region.
+
 <img src="provider.png" width="400" height="400">
+
+
+
+
+
 
 we used existing security group and used an key pair.
 <img src="sgweb.png" width="400" height="400">
+
+
+
 
 Then we launch our ec2 instance using our key-pair and security group created earlier.
 <img src="instance.png" width="400" height="400">
 <img src=" " width="400" height="400">
 
+
+
+
+
 Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
 <img src="ebs.png" width="400" height="400">
 <img src="webebs.png" width="400" height="400">
 
- Created an Github repo named cloud and uploaded an simple html code into it.
+ 
+
+
+
+Created an Github repo named cloud and uploaded an simple html code into it.
 <img src=" " width="400" height="400"> 
 <img src=" " width="400" height="400">
+
+
+
 
 Then we will copy the html code into var/www/html folder.
 <img src=" " width="400" height="400">
 <img src=" " width="400" height="400">
 
+
+
+
+
 Creating a S3 bucket 
 <img src="s3.png" width="400" height="400">
 <img src="webs3" width="400" height="400">
 
+
+
+
 Uploading images into it and allowing public access.
 <img src="uploadimg.png" width="400" height="400">
+
+
+
+
 
 Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the html code with cloudfront. 
 <img src="cdn.png" width="400" height="400">
 <img src="webcdn.png" width="400" height="400">
 
+
+
+
 At last we will use the terraform code in a file named task.tf
 Using terraform init commands to install plugins.
 Using terraform apply --auto-approve to launch the whole infratructure.
+
+
+
+
 
 Using the IP of our instance we will host our html code.
 <img src="web.png" width="400" height="400">
