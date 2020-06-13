@@ -163,22 +163,11 @@ Mounting the EBS to /var/www/html and then clonig the github repository into thi
        }
      }
 
+
+
 # Step:7
-mount the EBS to /var/www/html.
 
-
-
- Copy the html code into the /var/www/html folder.
-
-
-<img src=" " width="400" height="400">
-
-
-
-
-
-# Step:8
-Creating a S3 bucket 
+Creating a S3 bucke, uploading images into it amd allowing public access.
 
 
      resource  "aws_s3_bucket"    "S3_bucket"    {
@@ -188,8 +177,8 @@ Creating a S3 bucket
        acl    = "private"
        force_destroy = true
 
-}
-
+   
+        }
   
            locals {
              s3_origin_id   = "s3bucketOrigin"
@@ -206,8 +195,6 @@ Creating a S3 bucket
 
 
 
-# Step:9
-Uploading images into it and allowing public access.
 <img src="uploadimg.png">
 
 
