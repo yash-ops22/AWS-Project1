@@ -45,7 +45,12 @@
 
 # Step:1 
 
-Firstly We will configure the aws profile.
+Firstly We will configure the aws profile
+     C:\Users\win 10\Desktop\tera\mytest>aws configure --profile Yashu
+     AWS Access Key ID [****************LELI]:
+     AWS Secret Access Key [****************Av0P]:
+     Default region name [ap-south-1]:
+     Default output format [None]:
 
 # Step:2
 
