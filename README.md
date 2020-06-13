@@ -45,11 +45,12 @@
 # Step:1 
 
 Firstly We will configure the aws profile
-     C:\Users\win 10\Desktop\tera\mytest>aws configure --profile Yashu
-     AWS Access Key ID [****************LELI]:
-     AWS Secret Access Key [****************Av0P]:
-     Default region name [ap-south-1]:
-     Default output format [None]:
+    
+    C:\Users\win 10\Desktop\tera\mytest>aws configure --profile Yashu
+    AWS Access Key ID [****************LELI]:
+    AWS Secret Access Key [****************Av0P]:
+    Default region name [ap-south-1]:
+    Default output format [None]:
 
 # Step:2
 
@@ -64,6 +65,8 @@ Then we will set our provider which is aws and the region.
 # Step:3
 
 We used existing security group and used an key pair.
+
+
 <img src="sgweb.png">
 <img src="key.png">
 
