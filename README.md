@@ -1,29 +1,27 @@
 
 # Cloud
- The cloud gives us easy access to a broad range of
- technologies so that you can innovate faster and
- build nearly anything that we can imagine. We can 
- quickly spin up resources as you need them–from
- infrastructure services, such as compute, storage,
- and databases, to Internet of Things, machine learning,
- data lakes and analytics, and much more.
+    The cloud gives us easy access to a broad range of
+    technologies so that you can innovate faster and
+    build nearly anything that we can imagine. We can 
+    quickly spin up resources as you need them–from
+    infrastructure services, such as compute, storage,
+    and databases, to Internet of Things, machine learning,
+    data lakes and analytics, and much more.
 
 # AWS
- AWS (Amazon Web Services) is a comprehensive, evolving
- cloud computing platform provided by Amazon that includes
- a mixture of infrastructure as a service (IaaS), platform
- as a service (PaaS) and packaged software as a service
- (SaaS) offerings.
+    AWS (Amazon Web Services) is a comprehensive, evolving
+    cloud computing platform provided by Amazon that includes
+    a mixture of infrastructure as a service (IaaS), platform
+    as a service (PaaS) and packaged software as a service
+   (SaaS) offerings.
 
 
 # Main Services used
-Service #1 - EC2 [Elastic Compute Cloud]
 
-Service #2 - S3 Bucket
-
-Service #3 - CloudFront
-
-Service #4 - EBS[Elastic Block Storage]
+     Service #1 - EC2 [Elastic Compute Cloud]
+     Service #2 - S3 Bucket 
+     Service #3 - CloudFront
+     Service #4 - EBS[Elastic Block Storage]
  
 
 
@@ -31,7 +29,7 @@ Service #4 - EBS[Elastic Block Storage]
  aws services and using terraform code.
 
 
-# the_task_includes:
+# The_task_includes:
 
 1. Create the key and security group which allow the port 80.
 2. Launch EC2 instance.
