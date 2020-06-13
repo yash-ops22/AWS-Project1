@@ -18,15 +18,18 @@ The task includes:
 Firstly We will configure the aws profile.
 <img src=" " width="400" height="400">
 
-we created a security group and used an existing key pair.
-<img src=" " width="400" height="400">
+Then we will set our provider which is aws and the region.
+<img src="provider.png" width="400" height="400">
+
+we used existing security group and used an key pair.
+<img src="sgweb.png" width="400" height="400">
 
 Then we launch our ec2 instance using our key-pair and security group created earlier.
-<img src=" " width="400" height="400">
+<img src="instance.png" width="400" height="400">
 <img src=" " width="400" height="400">
 
 Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
-<img src=" " width="400" height="400">
+<img src="ebs.png" width="400" height="400">
 <img src=" " width="400" height="400">
 
  Created an Github repo named cloud and uploaded an simple html code into it.
