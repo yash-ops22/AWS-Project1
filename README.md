@@ -17,6 +17,8 @@ The task includes:
 
 //yashu
 
+# step:1 
+
 Firstly We will configure the aws profile.
 
 Then we will set our provider which is aws and the region.
