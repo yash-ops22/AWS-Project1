@@ -167,8 +167,30 @@ mount the EBS to /var/www/html.
 
 # Step:8
 Creating a S3 bucket 
-<img src="s3.png">
-<img src="webs3">
+
+
+     resource  "aws_s3_bucket"    "S3_bucket"    {
+
+       
+       bucket = "firsts3bucket121212123"
+       acl    = "private"
+       force_destroy = true
+
+}
+
+  
+           locals {
+             s3_origin_id   = "s3bucketOrigin"
+}
+
+      output   "s3bucket_id"   {
+
+              value  =   aws_s3_bucket.S3_bucket.id
+}
+
+
+
+<img src="webs3.png">
 
 
 
