@@ -7,7 +7,7 @@
     infrastructure services, such as compute, storage,
     and databases, to Internet of Things, machine learning,
     data lakes and analytics, and much more.
-    <img src="cloud.jpg">
+    <img src="cloud.jpg" >
 
 # AWS
     AWS (Amazon Web Services) is a comprehensive, evolving
@@ -16,10 +16,10 @@
     as a service (PaaS) and packaged software as a service
     (SaaS) offerings.
     
-    <img src="aws.jpg">
-
-
-# Main Services used
+    <img src="aws.jpg" >
+    
+    
+  #  Services used
 
      Service #1 - EC2 [Elastic Compute Cloud]
      Service #2 - S3 Bucket 
