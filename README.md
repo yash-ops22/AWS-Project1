@@ -29,29 +29,29 @@ Then we will set our provider which is aws and the region.
 
 
 we used existing security group and used an key pair.
-<img src="sgweb.png" width="400" height="400">
+<img src="sgweb.png">
 
 
 
 
 Then we launch our ec2 instance using our key-pair and security group created earlier.
 <img src="instance.png" width="400" height="400">
-<img src=" " width="400" height="400">
+<img src=" " >
 
 
 
 
 
 Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
-<img src="ebs.png" width="400" height="400">
-<img src="webebs.png" width="400" height="400">
+<img src="ebs.png">
+<img src="webebs.png">
 
  
 
 
 
 Created an Github repo named cloud and uploaded an simple html code into it.
-<img src=" " width="400" height="400"> 
+<img src=" " > 
 <img src=" " width="400" height="400">
 
 
@@ -66,22 +66,22 @@ Then we will copy the html code into var/www/html folder.
 
 
 Creating a S3 bucket 
-<img src="s3.png" width="400" height="400">
-<img src="webs3" width="400" height="400">
+<img src="s3.png">
+<img src="webs3">
 
 
 
 
 Uploading images into it and allowing public access.
-<img src="uploadimg.png" width="400" height="400">
+<img src="uploadimg.png">
 
 
 
 
 
 Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the html code with cloudfront. 
-<img src="cdn.png" width="400" height="400">
-<img src="webcdn.png" width="400" height="400">
+<img src="cdn.png">
+<img src="webcdn.png">
 
 
 
@@ -95,4 +95,4 @@ Using terraform apply --auto-approve to launch the whole infratructure.
 
 
 Using the IP of our instance we will host our html code.
-<img src="web.png" width="400" height="400">
+<img src="web.png">
