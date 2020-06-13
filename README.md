@@ -272,8 +272,8 @@ Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the ht
 
 # launching our infrastructure 
 
-At last we will use the terraform code in a file named task.
-   Terraform commands:
+Merging  the terraform code imto a single file named task.tf and using
+Terraform commands to build :
 
     terraform init -> to install plugins.
     terraform apply --auto-approve -> to launch the whole infratructure.
