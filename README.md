@@ -277,7 +277,7 @@ At last we will use the terraform code in a file named task.
 
 
 Using the public IP of our instance we will host our html code.
-<img src="web.png">
+<img src="web1.png">
 
 
 
