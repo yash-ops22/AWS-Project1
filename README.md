@@ -7,8 +7,7 @@
     infrastructure services, such as compute, storage,
     and databases, to Internet of Things, machine learning,
     data lakes and analytics, and much more.
-   
-   
+![]{images2.jpeg}   
  
  
 
