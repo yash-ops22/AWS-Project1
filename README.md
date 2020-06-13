@@ -19,4 +19,14 @@ So firstly we created a security group and used an existing key pair.
 Then we launch our ec2 instance using our key-pair and security group created earlier.
 
 
-Then we will create an EBS volume.  
+ Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
+ 
+ Created an Github repo named cloud and uploaded an simple html code into it.
+ 
+
+Then we will copy the html code into var/www/html folder.
+
+Creating a S3 bucket and uploading images into it and allowing public access.
+
+Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the html code with cloudfront. 
+<img src=" " width="400" height="400">
