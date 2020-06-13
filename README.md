@@ -7,7 +7,9 @@
     infrastructure services, such as compute, storage,
     and databases, to Internet of Things, machine learning,
     data lakes and analytics, and much more.
-    ![](img/images2.jpeg) 
+   
+   
+ ![](img/images2.jpeg) 
 
 # AWS
     AWS (Amazon Web Services) is a comprehensive, evolving
