@@ -109,6 +109,9 @@ Connecting to the instance and install required softwares.
    }
 
 
+<img src="OS.png">
+
+
 # Step:5
 Creating an EBS volume and will attach this volume to our instance.
 
