@@ -70,8 +70,6 @@ we used existing security group and used an key pair.
 # Step:4
 Then we launch our ec2 instance using our key-pair and security group created earlier.
 Connecting to the instance and install required softwares.
-<img src="instance.png" width="400" height="400">
-<img src=" " >
 
 
 
