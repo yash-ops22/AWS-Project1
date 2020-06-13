@@ -9,7 +9,8 @@
     data lakes and analytics, and much more.
    
    
- ![](img/images2.jpeg) 
+ 
+ <img src="images2.jpeg") 
 
 # AWS
     AWS (Amazon Web Services) is a comprehensive, evolving
