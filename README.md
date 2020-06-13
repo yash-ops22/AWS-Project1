@@ -66,6 +66,7 @@ Then we will set our provider which is aws and the region.
 
 We used existing security group and used an key pair.
 <img src="sgweb.png">
+<img src="key.png">
 
 
 
