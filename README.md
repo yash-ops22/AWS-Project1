@@ -110,7 +110,7 @@ Connecting to the instance and install required softwares.
 
 
 # Step:5
-Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
+Creating an EBS volume and will attach this volume to our instance.
 
 
         resource "aws_ebs_volume" "Ebs" {
@@ -136,15 +136,32 @@ Creating an EBS volume and will attach this volume to our instance, then we will
 
 <img src="webebs.png">
 
- 
-
-
 # Step:6
-Created an Github repo named cloud and uploaded an simple html code into it.
-<img src=" " > 
-<img src=" " width="400" height="400">
+Mounting the EBS to /var/www/html and then clonig the github repository into this folder.
 
+      resource  "null_resource"  "nullvalue3" {
 
+           depends_on = [
+           aws_volume_attachment.attach_EBS,
+           ]
+
+       connection {
+            type     = "ssh"
+            user     = "ec2-user"
+            private_key = file("C:/Users/win 10/Downloads/yashukey1.pem")
+            host     = aws_instance.instance1.public_ip
+         }
+  
+
+       provisioner "remote-exec" {
+             inline = [
+            "sudo mkfs.ext4  /dev/xvdh",
+            "sudo mount  /dev/xvdh  /var/www/html",
+            "sudo rm -rf /var/www/html/*",
+            "sudo git clone https://github.com/yash-ops22/aws_cloud.git /var/www/html/"
+            ]
+       }
+     }
 
 # Step:7
 mount the EBS to /var/www/html.
