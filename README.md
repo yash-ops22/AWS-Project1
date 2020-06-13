@@ -51,10 +51,15 @@ Firstly We will configure the aws profile.
 
 # Step:2
 Then we will set our provider which is aws and the region.
+//
+provider "aws" {
+  region     = "ap-south-1"
+  profile    = "Yashu"
+}
 
 <img src="provider.png" width="400" height="400">
 
-
+//
 
 
 
@@ -66,15 +71,55 @@ we used existing security group and used an key pair.
 
 # Step:4
 Then we launch our ec2 instance using our key-pair and security group created earlier.
+Connecting to the instance and install required softwares.
 <img src="instance.png" width="400" height="400">
 <img src=" " >
 
+/*
+resource "aws_instance"  "instance1" {
+  ami           = "ami-07a8c73a650069cf3"
+  instance_type = "t2.micro"
+  key_name	=  "yashukey1"
+  security_groups =  [ "launch-wizard-1" ] 
 
+  connection {
+    type     = "ssh"
+    user     = "ec2-user"
+    private_key = file("C:/Users/win 10/Downloads/yashukey1.pem")
+    host     = aws_instance.instance1.public_ip
+  }
+
+
+
+    provisioner "remote-exec" {
+    inline = [
+      "sudo yum install httpd php git -y",
+      "sudo systemctl restart httpd",
+      "sudo systemctl enable httpd",
+    ]
+  }
+
+tags = {
+    Name = "AmazonCloudOS"
+  }
+
+}
+*/
 
 
 # Step:5
 Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
-<img src="ebs.png">
+/*
+resource "aws_ebs_volume" "Ebs" {
+  availability_zone = aws_instance.instance1.availability_zone
+  size              = 1
+  
+   tags = {
+    Name = "EBS_1"
+  }
+}
+*/
+
 <img src="webebs.png">
 
  
@@ -88,7 +133,7 @@ Created an Github repo named cloud and uploaded an simple html code into it.
 
 
 # Step:7
-Then we will copy the html code into var/www/html folder.
+Then we will copy the html code into the /var/www/html folder.
 <img src=" " width="400" height="400">
 <img src=" " width="400" height="400">
 
