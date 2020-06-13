@@ -21,6 +21,7 @@ The task includes:
 
 Firstly We will configure the aws profile.
 
+# step:2
 Then we will set our provider which is aws and the region.
 
 <img src="provider.png" width="400" height="400">
@@ -29,13 +30,13 @@ Then we will set our provider which is aws and the region.
 
 
 
-
+#step:3
 we used existing security group and used an key pair.
 <img src="sgweb.png">
 
 
 
-
+#step:4
 Then we launch our ec2 instance using our key-pair and security group created earlier.
 <img src="instance.png" width="400" height="400">
 <img src=" " >
@@ -43,7 +44,7 @@ Then we launch our ec2 instance using our key-pair and security group created ea
 
 
 
-
+#step:5
 Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
 <img src="ebs.png">
 <img src="webebs.png">
@@ -51,14 +52,14 @@ Creating an EBS volume and will attach this volume to our instance, then we will
  
 
 
-
+#step:6
 Created an Github repo named cloud and uploaded an simple html code into it.
 <img src=" " > 
 <img src=" " width="400" height="400">
 
 
 
-
+#step:7
 Then we will copy the html code into var/www/html folder.
 <img src=" " width="400" height="400">
 <img src=" " width="400" height="400">
@@ -66,21 +67,21 @@ Then we will copy the html code into var/www/html folder.
 
 
 
-
+#step:8
 Creating a S3 bucket 
 <img src="s3.png">
 <img src="webs3">
 
 
 
-
+#step:9
 Uploading images into it and allowing public access.
 <img src="uploadimg.png">
 
 
 
 
-
+#step:10
 Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the html code with cloudfront. 
 <img src="cdn.png">
 <img src="webcdn.png">
@@ -88,9 +89,11 @@ Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the ht
 
 
 
+#Launching our infrastructure 
+
 At last we will use the terraform code in a file named task.tf
-Using terraform init commands to install plugins.
-Using terraform apply --auto-approve to launch the whole infratructure.
+// Using terraform init commands to install plugins.
+// Using terraform apply --auto-approve to launch the whole infratructure.
 
 
 
