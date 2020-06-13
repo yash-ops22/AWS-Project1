@@ -51,15 +51,13 @@ Firstly We will configure the aws profile.
 
 # Step:2
 Then we will set our provider which is aws and the region.
-//
-provider "aws" {
-  region     = "ap-south-1"
-  profile    = "Yashu"
+
+       provider  "aws"   {
+            region     = "ap-south-1"
+            profile    = "Yashu"
 }
 
-<img src="provider.png" width="400" height="400">
 
-//
 
 
 
