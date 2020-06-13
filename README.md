@@ -50,24 +50,24 @@ Service #4 - EBS[Elastic Block Storage]
 Firstly We will configure the aws profile.
 
 # Step:2
+
 Then we will set our provider which is aws and the region.
 
        provider  "aws"   {
             region     = "ap-south-1"
             profile    = "Yashu"
-}
-
-
-
+       }
 
 
 # Step:3
-we used existing security group and used an key pair.
+
+We used existing security group and used an key pair.
 <img src="sgweb.png">
 
 
 
 # Step:4
+
 Then we launch our ec2 instance using our key-pair and security group created earlier.
 Connecting to the instance and install required softwares.
 
@@ -103,10 +103,7 @@ Connecting to the instance and install required softwares.
     tags = {
     Name = "AmazonCloudOS"
       }
-
-}
-
-
+   }
 
 
 # Step:5
@@ -121,22 +118,21 @@ Creating an EBS volume and will attach this volume to our instance.
           tags = {
           Name = "EBS_1"
           }
-}
+      }
 
-
-
-      resource "aws_volume_attachment" "attach_EBS" {
+        resource "aws_volume_attachment" "attach_EBS" {
 
        device_name  =  "/dev/sdh"
        volume_id    =  "${aws_ebs_volume.Ebs.id}"
        instance_id  =  "${aws_instance.instance1.id}"
        force_detach =  true
-}
+     }
 
 
-<img src="webebs.png">
+   <img src="webebs.png">
 
 # Step:6
+
 Mounting the EBS to /var/www/html and then clonig the github repository into this folder.
 
       resource  "null_resource"  "nullvalue3" {
@@ -152,7 +148,6 @@ Mounting the EBS to /var/www/html and then clonig the github repository into thi
             host     = aws_instance.instance1.public_ip
          }
   
-
        provisioner "remote-exec" {
              inline = [
             "sudo mkfs.ext4  /dev/xvdh",
@@ -167,27 +162,27 @@ Mounting the EBS to /var/www/html and then clonig the github repository into thi
 
 # Step:7
 
-Creating a S3 bucke, uploading images into it amd allowing public access.
+Creating a S3 bucket, uploading images into it amd allowing public access.
 
 
       resource  "aws_s3_bucket"    "S3_bucket"    {
 
        
-       bucket = "firsts3bucket121212123"
-       acl    = "private"
-       force_destroy = true
+           bucket = "firsts3bucket121212123"
+           acl    = "private"
+           force_destroy = true
 
    
         }
   
            locals {
              s3_origin_id   = "s3bucketOrigin"
-}
+    }
 
       output   "s3bucket_id"   {
 
               value  =   aws_s3_bucket.S3_bucket.id
-}
+     }
 
 
       resource "aws_s3_bucket_object" "s3images" {
@@ -197,7 +192,7 @@ Creating a S3 bucke, uploading images into it amd allowing public access.
         source = "C:/Users/win 10/Desktop/uploads/s3images/hc.jpg"
 
         content_type = "image/jpg"
-}
+  }
 
 
 <img src="webs3.png">
@@ -208,7 +203,7 @@ Creating a S3 bucke, uploading images into it amd allowing public access.
 
 # Step:8
 
-Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the html code with cloudfront. 
+Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the html code with cloudfront url.
 
 
        resource "aws_cloudfront_distribution" "hybridcdn12" {
@@ -261,20 +256,27 @@ Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the ht
 
 
 
-<img src="webcdn.png">
+  <img src="webcdn.png">
 
 
 
 
 # launching our infrastructure 
 
-At last we will use the terraform code in a file named task.tf
-// Using terraform init commands to install plugins.
-// Using terraform apply --auto-approve to launch the whole infratructure.
+At last we will use the terraform code in a file named task.
+   Terraform commands:
+
+    terraform init -> to install plugins.
+    terraform apply --auto-approve -> to launch the whole infratructure.
 
 
 
 
 
-Using the IP of our instance we will host our html code.
+Using the public IP of our instance we will host our html code.
 <img src="web.png">
+
+
+
+We can destroy the infrastructure that we created using :
+      terraform destroy --auto-approve
