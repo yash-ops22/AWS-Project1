@@ -113,8 +113,7 @@ Connecting to the instance and install required softwares.
 Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
 
 
-/*
-resource "aws_ebs_volume" "Ebs" {
+        resource "aws_ebs_volume" "Ebs" {
  
           availability_zone = aws_instance.instance1.availability_zone
           size              = 1
@@ -126,14 +125,14 @@ resource "aws_ebs_volume" "Ebs" {
 
 
 
-resource "aws_volume_attachment" "attach_EBS" {
+      resource "aws_volume_attachment" "attach_EBS" {
 
        device_name  =  "/dev/sdh"
        volume_id    =  "${aws_ebs_volume.Ebs.id}"
        instance_id  =  "${aws_instance.instance1.id}"
        force_detach =  true
 }
-/*
+
 
 <img src="webebs.png">
 
