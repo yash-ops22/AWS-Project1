@@ -17,7 +17,7 @@ The task includes:
 
 //yashu
 
-# step:1 
+# Step:1 
 
 Firstly We will configure the aws profile.
 
@@ -44,7 +44,7 @@ Then we launch our ec2 instance using our key-pair and security group created ea
 
 
 
-#step:5
+# Step:5
 Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
 <img src="ebs.png">
 <img src="webebs.png">
