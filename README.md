@@ -7,13 +7,16 @@
     infrastructure services, such as compute, storage,
     and databases, to Internet of Things, machine learning,
     data lakes and analytics, and much more.
+    <img src="cloud.jpg">
 
 # AWS
     AWS (Amazon Web Services) is a comprehensive, evolving
     cloud computing platform provided by Amazon that includes
     a mixture of infrastructure as a service (IaaS), platform
     as a service (PaaS) and packaged software as a service
-   (SaaS) offerings.
+    (SaaS) offerings.
+    
+    <img src="aws.jpg">
 
 
 # Main Services used
