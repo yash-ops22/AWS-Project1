@@ -73,7 +73,7 @@ Connecting to the instance and install required softwares.
 
 
 
-resource "aws_instance"  "instance1" {
+      resource "aws_instance"  "instance1" {
 
 
            ami             = "ami-07a8c73a650069cf3"
@@ -82,7 +82,7 @@ resource "aws_instance"  "instance1" {
            security_groups =  [ "launch-wizard-1" ] 
 
   
-   connection {
+       connection {
 
             type        = "ssh"
             user        = "ec2-user"
