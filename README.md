@@ -49,8 +49,11 @@ Uploading images into it and allowing public access.
 
 Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the html code with cloudfront. 
 <img src="cdn.png" width="400" height="400">
-<img src="webcdn" width="400" height="400">
+<img src="webcdn.png" width="400" height="400">
 
 At last we will use the terraform code in a file named task.tf
 Using terraform init commands to install plugins.
 Using terraform apply --auto-approve to launch the whole infratructure.
+
+Using the IP of our instance we will host our html code.
+<img src="web.png" width="400" height="400">
