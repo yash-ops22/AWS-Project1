@@ -115,16 +115,29 @@ resource "aws_instance"  "instance1" {
 
 # Step:5
 Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
+
+
 /*
 resource "aws_ebs_volume" "Ebs" {
-  availability_zone = aws_instance.instance1.availability_zone
-  size              = 1
+ 
+          availability_zone = aws_instance.instance1.availability_zone
+          size              = 1
   
-   tags = {
-    Name = "EBS_1"
-  }
+          tags = {
+          Name = "EBS_1"
+          }
 }
-*/
+
+
+
+resource "aws_volume_attachment" "attach_EBS" {
+
+       device_name  =  "/dev/sdh"
+       volume_id    =  "${aws_ebs_volume.Ebs.id}"
+       instance_id  =  "${aws_instance.instance1.id}"
+       force_detach =  true
+}
+/*
 
 <img src="webebs.png">
 
@@ -139,9 +152,15 @@ Created an Github repo named cloud and uploaded an simple html code into it.
 
 
 # Step:7
-Then we will copy the html code into the /var/www/html folder.
+mount the EBS to /var/www/html.
+
+
+
+ Copy the html code into the /var/www/html folder.
+
+
 <img src=" " width="400" height="400">
-<img src=" " width="400" height="400">
+
 
 
 
