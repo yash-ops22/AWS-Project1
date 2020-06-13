@@ -30,7 +30,7 @@ Then we launch our ec2 instance using our key-pair and security group created ea
 
 Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
 <img src="ebs.png" width="400" height="400">
-<img src=" " width="400" height="400">
+<img src="webebs.png" width="400" height="400">
 
  Created an Github repo named cloud and uploaded an simple html code into it.
 <img src=" " width="400" height="400"> 
@@ -40,10 +40,17 @@ Then we will copy the html code into var/www/html folder.
 <img src=" " width="400" height="400">
 <img src=" " width="400" height="400">
 
-Creating a S3 bucket and uploading images into it and allowing public access.
-<img src=" " width="400" height="400">
-<img src=" " width="400" height="400">
+Creating a S3 bucket 
+<img src="s3.png" width="400" height="400">
+<img src="webs3" width="400" height="400">
+
+Uploading images into it and allowing public access.
+<img src="uploadimg.png" width="400" height="400">
 
 Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the html code with cloudfront. 
-<img src=" " width="400" height="400">
-<img src=" " width="400" height="400">
+<img src="cdn.png" width="400" height="400">
+<img src="webcdn" width="400" height="400">
+
+At last we will use the terraform code in a file named task.tf
+Using terraform init commands to install plugins.
+Using terraform apply --auto-approve to launch the whole infratructure.
