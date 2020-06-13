@@ -75,18 +75,23 @@ Connecting to the instance and install required softwares.
 <img src="instance.png" width="400" height="400">
 <img src=" " >
 
-/*
-resource "aws_instance"  "instance1" {
-  ami           = "ami-07a8c73a650069cf3"
-  instance_type = "t2.micro"
-  key_name	=  "yashukey1"
-  security_groups =  [ "launch-wizard-1" ] 
 
-  connection {
-    type     = "ssh"
-    user     = "ec2-user"
-    private_key = file("C:/Users/win 10/Downloads/yashukey1.pem")
-    host     = aws_instance.instance1.public_ip
+
+resource "aws_instance"  "instance1" {
+
+
+           ami             = "ami-07a8c73a650069cf3"
+           instance_type   = "t2.micro"
+           key_name	   =  "yashukey1"
+           security_groups =  [ "launch-wizard-1" ] 
+
+  
+   connection {
+
+            type        = "ssh"
+            user        = "ec2-user"
+            private_key = file("C:/Users/win 10/Downloads/yashukey1.pem")
+            host        = aws_instance.instance1.public_ip
   }
 
 
@@ -99,12 +104,13 @@ resource "aws_instance"  "instance1" {
     ]
   }
 
-tags = {
+    tags = {
     Name = "AmazonCloudOS"
-  }
+      }
 
 }
-*/
+
+
 
 
 # Step:5
