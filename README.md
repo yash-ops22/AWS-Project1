@@ -14,19 +14,33 @@ The task includes:
 8 Create a Cloudfront using s3 bucket(which contains images) and use the Cloudfront URL to  update in code in /var/www/html
 
 # solution
-So firstly we created a security group and used an existing key pair.
+
+Firstly We will configure the aws profile.
+<img src=" " width="400" height="400">
+
+we created a security group and used an existing key pair.
+<img src=" " width="400" height="400">
 
 Then we launch our ec2 instance using our key-pair and security group created earlier.
+<img src=" " width="400" height="400">
+<img src=" " width="400" height="400">
 
+Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
+<img src=" " width="400" height="400">
+<img src=" " width="400" height="400">
 
- Creating an EBS volume and will attach this volume to our instance, then we will mount this EBS volume in the /var/www/html location of our instance.
- 
  Created an Github repo named cloud and uploaded an simple html code into it.
- 
+<img src=" " width="400" height="400"> 
+<img src=" " width="400" height="400">
 
 Then we will copy the html code into var/www/html folder.
+<img src=" " width="400" height="400">
+<img src=" " width="400" height="400">
 
 Creating a S3 bucket and uploading images into it and allowing public access.
+<img src=" " width="400" height="400">
+<img src=" " width="400" height="400">
 
 Then we will create a CloudFront{CDN} using the S3 bucket. We wil update  the html code with cloudfront. 
+<img src=" " width="400" height="400">
 <img src=" " width="400" height="400">
