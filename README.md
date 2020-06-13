@@ -7,7 +7,7 @@
     infrastructure services, such as compute, storage,
     and databases, to Internet of Things, machine learning,
     data lakes and analytics, and much more.
-![]{images2.jpeg}   
+<img src="images%202.jpeg">
  
  
 
@@ -17,7 +17,7 @@
     a mixture of infrastructure as a service (IaaS), platform
     as a service (PaaS) and packaged software as a service
     (SaaS) offerings.
-    
+<img src="images.png">
     
     
     
@@ -30,7 +30,7 @@
     components needed to run a single application or 
     your entire datacenter.
     
-    
+<img src="images.jpeg">    
     
     
   #  Services used
